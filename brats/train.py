@@ -1,6 +1,7 @@
 import os, sys
 import glob
 sys.path.append(os.path.abspath(os.path.join('/data/linc9/3DUnetCNN/')))
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from unet3d.data import write_data_to_file, open_data_file
 from unet3d.generator import get_training_and_validation_generators
 from unet3d.model import unet_model_3d
